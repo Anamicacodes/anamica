@@ -1,5 +1,5 @@
 import { Cpu, Lightbulb, Mic, Users } from "lucide-react";
-import { profile } from "@/data/portfolio";
+import { photos, profile } from "@/data/portfolio";
 import { Reveal, SectionHeading, Tilt } from "./ui";
 
 const brings = [
@@ -93,6 +93,21 @@ export function About() {
           </Reveal>
 
           <div className="grid gap-4 sm:grid-cols-2">
+            <Reveal className="sm:col-span-2">
+              <Tilt max={6}>
+                <figure className="glass glow-card -rotate-1 rounded-2xl p-3 pb-4">
+                  <img
+                    src={photos.portrait}
+                    alt="Anamica in a white tee, smiling in front of a red sandstone wall"
+                    loading="lazy"
+                    className="h-64 w-full rounded-xl object-cover object-top sm:h-72"
+                  />
+                  <figcaption className="mt-3 px-1 text-center text-xs font-medium text-muted-foreground">
+                    Hi, that's me — usually somewhere between a keyboard and a stage.
+                  </figcaption>
+                </figure>
+              </Tilt>
+            </Reveal>
             {brings.map((b, i) => (
               <Reveal key={b.title} delay={i * 90}>
                 <Tilt className="h-full">

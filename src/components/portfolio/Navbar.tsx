@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import { Menu, X, Sparkles } from "lucide-react";
 import { navLinks } from "@/data/portfolio";
 import { Monogram } from "./ui";
+import { ThemeToggle } from "./ThemeToggle";
 
 export function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -26,7 +27,7 @@ export function Navbar() {
           scrolled ? "mx-3 py-2 sm:mx-auto" : "mx-3 py-3 sm:mx-auto"
         }`}
       >
-        <a href="#home" className="flex items-center gap-3" aria-label="Anamica — home">
+        <a href="/#home" className="flex items-center gap-3" aria-label="Anamica — home">
           <Monogram size="sm" />
           <span
             className={`font-display font-bold tracking-tight text-foreground transition-all ${
@@ -51,8 +52,9 @@ export function Navbar() {
         </ul>
 
         <div className="flex items-center gap-2">
+          <ThemeToggle />
           <a
-            href="#contact"
+            href="/#contact"
             className="hidden items-center gap-2 rounded-xl bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground transition-transform hover:scale-[1.03] sm:inline-flex"
           >
             <Sparkles className="size-4" aria-hidden="true" />
@@ -86,7 +88,7 @@ export function Navbar() {
             ))}
             <li>
               <a
-                href="#contact"
+                href="/#contact"
                 onClick={() => setOpen(false)}
                 className="mt-1 block rounded-xl bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
               >

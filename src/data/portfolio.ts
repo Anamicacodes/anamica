@@ -5,6 +5,15 @@
  * PRIVACY RULE: never store full credential IDs. Use masked form only (e.g. "XXXX-XXXX-4115").
  */
 
+import portraitPhoto from "@/assets/photos/portrait.jpg.asset.json";
+import heroPhoto from "@/assets/photos/hero.png.asset.json";
+import resumePdf from "@/assets/anamica-resume.pdf.asset.json";
+
+export const photos = {
+  hero: heroPhoto.url,
+  portrait: portraitPhoto.url,
+};
+
 export const profile = {
   name: "Anamica",
   pronouns: "She/Her",
@@ -17,8 +26,7 @@ export const profile = {
   email: "anamicagupta246@gmail.com",
   linkedin: "https://www.linkedin.com/in/ana2406/",
   github: "https://github.com/Anamicacodes",
-  // TODO: replace with a real CV file in /public (e.g. /anamica-cv.pdf)
-  cvUrl: "",
+  cvUrl: resumePdf.url,
 };
 
 export interface SkillGroup {
@@ -300,11 +308,19 @@ export const certCategories: Array<"All" | CertCategory> = [
   "Workshops",
 ];
 
+import scienceCongress from "@/assets/photos/science-congress.jpg.asset.json";
+import vguJaipur from "@/assets/photos/vgu.jpg.asset.json";
+import teamCrew from "@/assets/photos/team.jpg.asset.json";
+import pravirbhavTalk from "@/assets/photos/talk.jpg.asset.json";
+import mittalPodium from "@/assets/photos/podium.jpg.asset.json";
+import hypeCrew from "@/assets/photos/hype.jpg.asset.json";
+import googlify from "@/assets/photos/googlify.jpg.asset.json";
+import blazerCampus from "@/assets/photos/blazer.jpg.asset.json";
+
 export interface GalleryItem {
   label: string;
   category: string;
   date?: string;
-  // TODO: replace `src` with real uploaded photos (src/assets or /public/images/)
   src?: string;
 }
 
@@ -321,14 +337,48 @@ export const galleryCategories = [
 ] as const;
 
 export const galleryItems: GalleryItem[] = [
-  { label: "Public speaking photo", category: "Public speaking" },
-  { label: "Anchoring at campus event", category: "Anchoring" },
-  { label: "Community activity", category: "Community building" },
-  { label: "Hackathon participation", category: "Hackathons" },
-  { label: "Workshop moment", category: "Workshops" },
-  { label: "Campus event highlight", category: "Campus events" },
-  { label: "Team activity", category: "Team activities" },
-  { label: "Learning & networking", category: "Learning & networking" },
+  {
+    label: "At the Indian Science Congress, LPU",
+    category: "Public speaking",
+    date: "Jan 2024",
+    src: scienceCongress.url,
+  },
+  {
+    label: "Presenting at Avirbhav, LPU",
+    category: "Public speaking",
+    src: pravirbhavTalk.url,
+  },
+  {
+    label: "On the podium at Mittal School of Business",
+    category: "Anchoring",
+    src: mittalPodium.url,
+  },
+  {
+    label: "Hype crew on stage, VGU Jaipur",
+    category: "Community building",
+    src: hypeCrew.url,
+  },
+  {
+    label: "With the team after the event",
+    category: "Team activities",
+    src: teamCrew.url,
+  },
+  {
+    label: "Googlify 2024 at LPU",
+    category: "Learning & networking",
+    date: "Sep 2024",
+    src: googlify.url,
+  },
+  {
+    label: "Campus formals day",
+    category: "Campus events",
+    src: blazerCampus.url,
+  },
+  {
+    label: "Visiting VGU Jaipur",
+    category: "Campus events",
+    src: vguJaipur.url,
+  },
 ];
 
 export interface Milestone {
@@ -381,12 +431,12 @@ export const milestones: Milestone[] = [
 ];
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Certificates", href: "#certificates" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Certificates", href: "/certificates" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Contact", href: "/#contact" },
 ];

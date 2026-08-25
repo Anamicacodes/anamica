@@ -46,7 +46,7 @@
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
-  /* Deep navy "night campus" palette — single dark theme by design */
+  /* Deep navy "night campus" palette — default dark theme */
   --background: oklch(0.16 0.03 264);
   --foreground: oklch(0.95 0.015 255);
   --card: oklch(0.21 0.035 262);
@@ -72,6 +72,35 @@
   --glow-blue: oklch(0.68 0.17 235 / 35%);
   --glow-violet: oklch(0.66 0.19 300 / 30%);
   --glow-coral: oklch(0.74 0.16 35 / 28%);
+}
+
+/* Light "day campus" palette — toggled via .light on <html> */
+.light {
+  --background: oklch(0.97 0.008 250);
+  --foreground: oklch(0.24 0.045 264);
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.24 0.045 264);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.24 0.045 264);
+  --primary: oklch(0.55 0.19 252); /* electric blue, darker for contrast */
+  --primary-foreground: oklch(0.98 0.005 255);
+  --secondary: oklch(0.93 0.015 258);
+  --secondary-foreground: oklch(0.28 0.05 264);
+  --muted: oklch(0.94 0.012 258);
+  --muted-foreground: oklch(0.45 0.04 262);
+  --accent: oklch(0.52 0.2 300); /* violet */
+  --accent-foreground: oklch(0.98 0.005 300);
+  --coral: oklch(0.62 0.17 38); /* warm coral, deepened */
+  --coral-foreground: oklch(0.98 0.01 40);
+  --destructive: oklch(0.58 0.2 25);
+  --destructive-foreground: oklch(0.98 0.01 20);
+  --border: oklch(0.25 0.04 264 / 12%);
+  --input: oklch(0.25 0.04 264 / 18%);
+  --ring: oklch(0.55 0.19 252);
+
+  --glow-blue: oklch(0.55 0.19 252 / 22%);
+  --glow-violet: oklch(0.52 0.2 300 / 18%);
+  --glow-coral: oklch(0.62 0.17 38 / 20%);
 }
 
 @layer base {
@@ -137,8 +166,8 @@
 
 @utility bg-grid {
   background-image:
-    linear-gradient(to right, oklch(1 0 0 / 4%) 1px, transparent 1px),
-    linear-gradient(to bottom, oklch(1 0 0 / 4%) 1px, transparent 1px);
+    linear-gradient(to right, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--foreground) 6%, transparent) 1px, transparent 1px);
   background-size: 56px 56px;
 }
 
