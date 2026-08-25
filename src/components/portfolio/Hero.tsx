@@ -1,5 +1,5 @@
-import { Github, Linkedin, Mail, Download, ArrowDown, User } from "lucide-react";
-import { profile } from "@/data/portfolio";
+import { Github, Linkedin, Mail, Download, ArrowDown } from "lucide-react";
+import { photos, profile } from "@/data/portfolio";
 import { Doodle, Monogram, Reveal, Tilt, useMagnetic } from "./ui";
 
 const floatingTags = [
@@ -152,16 +152,12 @@ export function Hero() {
                 </textPath>
               </text>
             </svg>
-            {/* TODO: replace this placeholder with Anamica's uploaded profile photo */}
-            <div className="glass glow-card grid size-52 place-items-center rounded-full sm:size-60">
-              <div className="grid size-44 place-items-center rounded-full border border-dashed border-border sm:size-52">
-                <div className="text-center">
-                  <User className="mx-auto size-10 text-muted-foreground" aria-hidden="true" />
-                  <p className="mt-2 px-6 text-xs text-muted-foreground">
-                    Profile photo placeholder
-                  </p>
-                </div>
-              </div>
+            <div className="glass glow-card grid size-52 place-items-center rounded-full p-2 sm:size-60">
+              <img
+                src={photos.hero}
+                alt="Anamica smiling on a rooftop at sunset, holding a laptop"
+                className="size-48 rounded-full object-cover object-top sm:size-56"
+              />
             </div>
             <div className="absolute -bottom-2 -right-2">
               <Monogram size="md" />
