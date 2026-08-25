@@ -54,9 +54,14 @@ export function Hero() {
           </Reveal>
 
           <Reveal delay={100}>
-            <h1 className="mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
+            <h1 className="relative mt-6 font-display text-5xl font-bold leading-[1.05] tracking-tight text-foreground sm:text-6xl lg:text-7xl">
               Hi, I'm <span className="text-gradient">Anamica.</span>
+              <Doodle
+                kind="sparkle"
+                className="animate-pulse-glow absolute -right-8 -top-4 size-7 text-coral sm:-right-12"
+              />
             </h1>
+            <Doodle kind="squiggle" className="mt-3 h-4 w-40 text-primary/70" />
           </Reveal>
 
           <Reveal delay={200}>

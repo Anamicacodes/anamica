@@ -73,6 +73,23 @@ export function About() {
                 </div>
               ))}
             </dl>
+
+            {/* Pocket notes — small personal stickers, no invented facts */}
+            <div className="flex flex-wrap gap-2 pt-2" aria-label="A few personal notes">
+              {[
+                "she/her",
+                "happiest on a stage with a mic",
+                "hackathon floors > quiet weekends",
+                "forever collecting certificates & stories",
+              ].map((note) => (
+                <span
+                  key={note}
+                  className="rounded-full border border-dashed border-accent/50 bg-accent/10 px-3.5 py-1.5 text-xs font-medium text-accent-foreground"
+                >
+                  {note}
+                </span>
+              ))}
+            </div>
           </Reveal>
 
           <div className="grid gap-4 sm:grid-cols-2">
