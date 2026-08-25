@@ -337,14 +337,48 @@ export const galleryCategories = [
 ] as const;
 
 export const galleryItems: GalleryItem[] = [
-  { label: "Public speaking photo", category: "Public speaking" },
-  { label: "Anchoring at campus event", category: "Anchoring" },
-  { label: "Community activity", category: "Community building" },
-  { label: "Hackathon participation", category: "Hackathons" },
-  { label: "Workshop moment", category: "Workshops" },
-  { label: "Campus event highlight", category: "Campus events" },
-  { label: "Team activity", category: "Team activities" },
-  { label: "Learning & networking", category: "Learning & networking" },
+  {
+    label: "At the Indian Science Congress, LPU",
+    category: "Public speaking",
+    date: "Jan 2024",
+    src: scienceCongress.url,
+  },
+  {
+    label: "Presenting at Avirbhav, LPU",
+    category: "Public speaking",
+    src: pravirbhavTalk.url,
+  },
+  {
+    label: "On the podium at Mittal School of Business",
+    category: "Anchoring",
+    src: mittalPodium.url,
+  },
+  {
+    label: "Hype crew on stage, VGU Jaipur",
+    category: "Community building",
+    src: hypeCrew.url,
+  },
+  {
+    label: "With the team after the event",
+    category: "Team activities",
+    src: teamCrew.url,
+  },
+  {
+    label: "Googlify 2024 at LPU",
+    category: "Learning & networking",
+    date: "Sep 2024",
+    src: googlify.url,
+  },
+  {
+    label: "Campus formals day",
+    category: "Campus events",
+    src: blazerCampus.url,
+  },
+  {
+    label: "Visiting VGU Jaipur",
+    category: "Campus events",
+    src: vguJaipur.url,
+  },
 ];
 
 export interface Milestone {
@@ -397,12 +431,12 @@ export const milestones: Milestone[] = [
 ];
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Certificates", href: "#certificates" },
-  { label: "Gallery", href: "#gallery" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/#home" },
+  { label: "About", href: "/#about" },
+  { label: "Skills", href: "/#skills" },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Certificates", href: "/certificates" },
+  { label: "Gallery", href: "/#gallery" },
+  { label: "Contact", href: "/#contact" },
 ];
