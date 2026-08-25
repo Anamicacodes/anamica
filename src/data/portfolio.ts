@@ -7,6 +7,7 @@
 
 import portraitPhoto from "@/assets/photos/portrait.jpg.asset.json";
 import heroPhoto from "@/assets/photos/hero.png.asset.json";
+import resumePdf from "@/assets/anamica-resume.pdf.asset.json";
 
 export const photos = {
   hero: heroPhoto.url,
@@ -25,8 +26,7 @@ export const profile = {
   email: "anamicagupta246@gmail.com",
   linkedin: "https://www.linkedin.com/in/ana2406/",
   github: "https://github.com/Anamicacodes",
-  // TODO: replace with a real CV file in /public (e.g. /anamica-cv.pdf)
-  cvUrl: "",
+  cvUrl: resumePdf.url,
 };
 
 export interface SkillGroup {
