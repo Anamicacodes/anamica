@@ -5,6 +5,14 @@
  * PRIVACY RULE: never store full credential IDs. Use masked form only (e.g. "XXXX-XXXX-4115").
  */
 
+import portraitPhoto from "@/assets/photos/portrait.jpg.asset.json";
+import heroPhoto from "@/assets/photos/hero.png.asset.json";
+
+export const photos = {
+  hero: heroPhoto.url,
+  portrait: portraitPhoto.url,
+};
+
 export const profile = {
   name: "Anamica",
   pronouns: "She/Her",
@@ -300,11 +308,19 @@ export const certCategories: Array<"All" | CertCategory> = [
   "Workshops",
 ];
 
+import scienceCongress from "@/assets/photos/science-congress.jpg.asset.json";
+import vguJaipur from "@/assets/photos/vgu.jpg.asset.json";
+import teamCrew from "@/assets/photos/team.jpg.asset.json";
+import pravirbhavTalk from "@/assets/photos/talk.jpg.asset.json";
+import mittalPodium from "@/assets/photos/podium.jpg.asset.json";
+import hypeCrew from "@/assets/photos/hype.jpg.asset.json";
+import googlify from "@/assets/photos/googlify.jpg.asset.json";
+import blazerCampus from "@/assets/photos/blazer.jpg.asset.json";
+
 export interface GalleryItem {
   label: string;
   category: string;
   date?: string;
-  // TODO: replace `src` with real uploaded photos (src/assets or /public/images/)
   src?: string;
 }
 
