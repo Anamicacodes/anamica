@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, Download, ArrowDown, User } from "lucide-react";
 import { profile } from "@/data/portfolio";
-import { Monogram, Reveal, useMagnetic } from "./ui";
+import { Doodle, Monogram, Reveal, useMagnetic } from "./ui";
 
 const floatingTags = [
   { label: "Code", className: "left-[6%] top-[18%]", delay: "0s", rot: "-6deg" },

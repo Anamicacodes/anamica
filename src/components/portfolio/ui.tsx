@@ -181,6 +181,38 @@ export function Monogram({ size = "md" }: { size?: "sm" | "md" | "lg" }) {
   );
 }
 
+/** Hand-drawn style doodles (sparkle, squiggle) for a personal, non-template feel. */
+export function Doodle({
+  kind,
+  className = "",
+}: {
+  kind: "sparkle" | "squiggle" | "heart";
+  className?: string;
+}) {
+  if (kind === "sparkle")
+    return (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+        <path d="M12 2c.6 4.8 2.4 7.4 8 8-5.6.6-7.4 3.2-8 8-.6-4.8-2.4-7.4-8-8 5.6-.6 7.4-3.2 8-8z" />
+      </svg>
+    );
+  if (kind === "heart")
+    return (
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" className={className}>
+        <path d="M12 21C7 16.5 3 13.3 3 9.3 3 6.4 5.2 4.5 7.7 4.5c1.7 0 3.3.9 4.3 2.4 1-1.5 2.6-2.4 4.3-2.4 2.5 0 4.7 1.9 4.7 4.8 0 4-4 7.2-9 11.7z" />
+      </svg>
+    );
+  return (
+    <svg viewBox="0 0 120 20" fill="none" aria-hidden="true" className={className}>
+      <path
+        d="M2 14c10-10 16 8 26-2s16 8 26-2 16 8 26-2 16 8 26-2"
+        stroke="currentColor"
+        strokeWidth="3"
+        strokeLinecap="round"
+      />
+    </svg>
+  );
+}
+
 /** Magnetic hover for CTA buttons (desktop only). */
 export function useMagnetic() {
   const ref = useRef<HTMLAnchorElement>(null);
