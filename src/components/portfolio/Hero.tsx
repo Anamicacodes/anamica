@@ -167,6 +167,7 @@ export function Hero() {
               <Monogram size="md" />
             </div>
           </div>
+          </Tilt>
         </Reveal>
       </div>
     </section>
