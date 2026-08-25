@@ -1,24 +1,81 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { Navbar } from "@/components/portfolio/Navbar";
+import { Hero } from "@/components/portfolio/Hero";
+import { About } from "@/components/portfolio/About";
+import { Skills } from "@/components/portfolio/Skills";
+import { Experience } from "@/components/portfolio/Experience";
+import { Projects } from "@/components/portfolio/Projects";
+import { Certificates } from "@/components/portfolio/Certificates";
+import { Gallery } from "@/components/portfolio/Gallery";
+import { Journey } from "@/components/portfolio/Journey";
+import { Contact, Footer } from "@/components/portfolio/Contact";
+import { CursorGlow } from "@/components/portfolio/ui";
 
-// No head() here: the home route inherits title/description/og/twitter from
-// __root.tsx, and ships no og:image so serve-time hosting can inject the
-// project's social preview (explicit og:image or latest screenshot).
 export const Route = createFileRoute("/")({
+  head: () => ({
+    meta: [
+      { title: "Anamica | Computer Science Student, Developer & Community Builder" },
+      {
+        name: "description",
+        content:
+          "Explore Anamica's portfolio featuring web development projects, AI learning, hackathons, public speaking, event experiences, community initiatives, and certifications.",
+      },
+      {
+        property: "og:title",
+        content: "Anamica | Computer Science Student, Developer & Community Builder",
+      },
+      {
+        property: "og:description",
+        content:
+          "Web development projects, AI learning, hackathons, public speaking, and community initiatives — Anamica's portfolio.",
+      },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/" },
+      { name: "twitter:card", content: "summary_large_image" },
+    ],
+    links: [{ rel: "canonical", href: "/" }],
+    scripts: [
+      {
+        type: "application/ld+json",
+        children: JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: "Anamica",
+          email: "mailto:anamicagupta246@gmail.com",
+          url: "/",
+          sameAs: [
+            "https://www.linkedin.com/in/ana2406/",
+            "https://github.com/Anamicacodes",
+          ],
+          alumniOf: {
+            "@type": "CollegeOrUniversity",
+            name: "Lovely Professional University",
+          },
+          address: { "@type": "PostalAddress", addressLocality: "Ludhiana", addressRegion: "Punjab", addressCountry: "IN" },
+        }),
+      },
+    ],
+  }),
   component: Index,
 });
 
-// IMPORTANT: Replace this placeholder. See ./README.md for routing conventions.
 function Index() {
   return (
-    <div
-      className="flex min-h-screen items-center justify-center"
-      style={{ backgroundColor: "#fcfbf8" }}
-    >
-      <img
-        data-lovable-blank-page-placeholder="REMOVE_THIS"
-        src="https://cdn.gpteng.co/blank-app-v1.svg"
-        alt="Your app will live here!"
-      />
+    <div className="relative min-h-screen overflow-x-clip bg-background text-foreground">
+      <CursorGlow />
+      <Navbar />
+      <main>
+        <Hero />
+        <About />
+        <Skills />
+        <Experience />
+        <Journey />
+        <Projects />
+        <Certificates />
+        <Gallery />
+        <Contact />
+      </main>
+      <Footer />
     </div>
   );
 }
