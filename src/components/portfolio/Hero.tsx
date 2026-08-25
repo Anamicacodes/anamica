@@ -1,6 +1,6 @@
 import { Github, Linkedin, Mail, Download, ArrowDown, User } from "lucide-react";
 import { profile } from "@/data/portfolio";
-import { Doodle, Monogram, Reveal, useMagnetic } from "./ui";
+import { Doodle, Monogram, Reveal, Tilt, useMagnetic } from "./ui";
 
 const floatingTags = [
   { label: "Code", className: "left-[6%] top-[18%]", delay: "0s", rot: "-6deg" },
@@ -136,6 +136,7 @@ export function Hero() {
 
         {/* Visual: rotating monogram ring + profile photo placeholder */}
         <Reveal delay={250} className="relative mx-auto">
+          <Tilt max={10}>
           <div className="relative grid size-72 place-items-center sm:size-80">
             <svg
               aria-hidden="true"
