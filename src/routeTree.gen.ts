@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CertificatesRouteImport } from './routes/certificates'
+import { Route as MoreAboutMeRouteImport } from './routes/more-about-me'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
@@ -22,31 +23,40 @@ const CertificatesRoute = CertificatesRouteImport.update({
   path: '/certificates',
   getParentRoute: () => rootRouteImport,
 } as any)
+const MoreAboutMeRoute = MoreAboutMeRouteImport.update({
+  id: '/more-about-me',
+  path: '/more-about-me',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/certificates': typeof CertificatesRoute
+  '/more-about-me': typeof MoreAboutMeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/certificates': typeof CertificatesRoute
+  '/more-about-me': typeof MoreAboutMeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/certificates': typeof CertificatesRoute
+  '/more-about-me': typeof MoreAboutMeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/certificates'
+  fullPaths: '/' | '/certificates' | '/more-about-me'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/certificates'
-  id: '__root__' | '/' | '/certificates'
+  to: '/' | '/certificates' | '/more-about-me'
+  id: '__root__' | '/' | '/certificates' | '/more-about-me'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CertificatesRoute: typeof CertificatesRoute
+  MoreAboutMeRoute: typeof MoreAboutMeRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -65,12 +75,20 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CertificatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/more-about-me': {
+      id: '/more-about-me'
+      path: '/more-about-me'
+      fullPath: '/more-about-me'
+      preLoaderRoute: typeof MoreAboutMeRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CertificatesRoute: CertificatesRoute,
+  MoreAboutMeRoute: MoreAboutMeRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
