@@ -97,13 +97,14 @@ export function About() {
               <Tilt max={6}>
                 <figure className="glass glow-card -rotate-1 rounded-2xl p-3 pb-4">
                   <img
-                    src={photos.portrait}
-                    alt="Anamica in a white tee, smiling in front of a red sandstone wall"
+                    src={photos.teaching}
+                    alt="Anamica leading a critical-thinking session for school students in a classroom"
                     loading="lazy"
-                    className="h-64 w-full rounded-xl object-cover object-top sm:h-72"
+                    className="h-64 w-full rounded-xl object-cover sm:h-72"
+                    style={{ objectPosition: "50% 30%" }}
                   />
                   <figcaption className="mt-3 px-1 text-center text-xs font-medium text-muted-foreground">
-                    Hi, that's me — usually somewhere between a keyboard and a stage.
+                    Hi, that's me — teaching critical thinking to a room full of curious kids.
                   </figcaption>
                 </figure>
               </Tilt>
