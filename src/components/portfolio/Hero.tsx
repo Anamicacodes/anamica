@@ -137,7 +137,7 @@ export function Hero() {
         {/* Visual: rotating monogram ring + profile photo placeholder */}
         <Reveal delay={250} className="relative mx-auto">
           <Tilt max={10}>
-          <div className="relative grid size-72 place-items-center sm:size-80">
+          <div className="relative grid size-80 place-items-center sm:size-96">
             <svg
               aria-hidden="true"
               viewBox="0 0 100 100"
@@ -152,11 +152,12 @@ export function Hero() {
                 </textPath>
               </text>
             </svg>
-            <div className="glass glow-card grid size-52 place-items-center rounded-full p-2 sm:size-60">
+            <div className="glass glow-card grid size-60 place-items-center rounded-full p-2 ring-4 ring-primary/20 sm:size-72">
               <img
                 src={photos.hero}
                 alt="Anamica smiling in a white t-shirt in front of a red sandstone wall"
-                className="size-48 rounded-full object-cover object-top sm:size-56"
+                className="size-56 rounded-full object-cover sm:size-64"
+                style={{ objectPosition: "68% 78%" }}
               />
             </div>
             <div className="absolute -bottom-2 -right-2">
