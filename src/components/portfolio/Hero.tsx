@@ -155,7 +155,7 @@ export function Hero() {
             <div className="glass glow-card grid size-52 place-items-center rounded-full p-2 sm:size-60">
               <img
                 src={photos.hero}
-                alt="Anamica smiling on a rooftop at sunset, holding a laptop"
+                alt="Anamica smiling in a white t-shirt in front of a red sandstone wall"
                 className="size-48 rounded-full object-cover object-top sm:size-56"
               />
             </div>
