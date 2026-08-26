@@ -7,11 +7,13 @@
 
 import portraitPhoto from "@/assets/photos/portrait.jpg.asset.json";
 import heroPhoto from "@/assets/photos/hero-2.jpg.asset.json";
+import teachingPhoto from "@/assets/photos/teaching.jpg.asset.json";
 import resumePdf from "@/assets/anamica-resume.pdf.asset.json";
 
 export const photos = {
   hero: heroPhoto.url,
   portrait: portraitPhoto.url,
+  teaching: teachingPhoto.url,
 };
 
 export const profile = {
