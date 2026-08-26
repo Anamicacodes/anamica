@@ -157,7 +157,7 @@ export function Hero() {
                 src={photos.hero}
                 alt="Anamica smiling in a white t-shirt in front of a red sandstone wall"
                 className="size-56 rounded-full object-cover sm:size-64"
-                style={{ objectPosition: "68% 22%" }}
+                style={{ objectPosition: "68% 78%" }}
               />
             </div>
             <div className="absolute -bottom-2 -right-2">
