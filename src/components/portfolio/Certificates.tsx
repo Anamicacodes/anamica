@@ -99,7 +99,7 @@ export function Certificates() {
           <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
             Languages I code in
           </span>
-          {skillGroups[0].skills.map((lang) => (
+          {(skillGroups.find((g) => g.title === "Programming")?.skills ?? []).map((lang) => (
             <span
               key={lang}
               className="glass rounded-full px-4 py-1.5 text-xs font-semibold text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
