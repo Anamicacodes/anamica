@@ -4,7 +4,7 @@ import { Doodle, Monogram, Reveal, Tilt, useMagnetic } from "./ui";
 
 const floatingTags = [
   { label: "Code", className: "left-[6%] top-[18%]", delay: "0s", rot: "-6deg" },
-  { label: "AI", className: "right-[8%] top-[24%]", delay: "1.2s", rot: "5deg" },
+  { label: "Build", className: "right-[8%] top-[24%]", delay: "1.2s", rot: "5deg" },
   { label: "Events", className: "left-[10%] bottom-[22%]", delay: "2s", rot: "4deg" },
   { label: "Community", className: "right-[6%] bottom-[18%]", delay: "0.6s", rot: "-5deg" },
 ];
@@ -148,7 +148,7 @@ export function Hero() {
               </defs>
               <text className="fill-muted-foreground" style={{ fontSize: 7.5, letterSpacing: 2.5 }}>
                 <textPath href="#circlePath">
-                  CODE · AI · EVENTS · COMMUNITY · SPEAK · BUILD ·
+                  BUILD · CODE · EVENTS · COMMUNITY · SPEAK ·
                 </textPath>
               </text>
             </svg>
