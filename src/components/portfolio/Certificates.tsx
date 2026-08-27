@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 import { Search, Award, X, ZoomIn, CalendarDays } from "lucide-react";
-import { certificates, certCategories, type Certificate } from "@/data/portfolio";
+import { certificates, certCategories, skillGroups, type Certificate } from "@/data/portfolio";
 import { Reveal, SectionHeading } from "./ui";
 
 function CertModal({ cert, onClose }: { cert: Certificate; onClose: () => void }) {
@@ -94,6 +94,20 @@ export function Certificates() {
           title="Proof of curiosity"
           description={`${certificates.length} certificates across development, AI, hackathons, leadership, and community work. Credential IDs are masked for privacy.`}
         />
+
+        <Reveal className="mt-8 flex flex-wrap items-center justify-center gap-2">
+          <span className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Languages I code in
+          </span>
+          {skillGroups[0].skills.map((lang) => (
+            <span
+              key={lang}
+              className="glass rounded-full px-4 py-1.5 text-xs font-semibold text-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
+            >
+              {lang}
+            </span>
+          ))}
+        </Reveal>
 
         <Reveal className="mt-12 flex flex-col gap-4">
           <div className="relative mx-auto w-full max-w-md">
