@@ -41,8 +41,9 @@ export function About() {
           title="Curious by default, driven by people"
         />
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <Reveal className="space-y-5 text-base leading-relaxed text-muted-foreground">
+        <div className="mt-14 grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <Reveal className="flex h-full flex-col space-y-5 text-base leading-relaxed text-muted-foreground">
+
             <p>
               I'm a first-year B.Tech Computer Science and Engineering student at{" "}
               <span className="font-semibold text-foreground">
