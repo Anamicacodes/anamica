@@ -45,7 +45,7 @@ export function Gallery() {
         <SectionHeading
           eyebrow="Gallery"
           title="Moments & milestones"
-          description="Stages, hackathon floors, workshops, and community days — photos coming soon."
+          description="Community Development Project sessions, stages, hackathon floors, workshops and campus days."
         />
 
         <Reveal className="mt-12 flex flex-wrap justify-center gap-2">
