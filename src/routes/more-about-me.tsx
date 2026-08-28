@@ -156,6 +156,38 @@ function MoreAboutMePage() {
               </div>
             </div>
 
+            <div className="mt-16">
+              <h2 className="font-display text-2xl font-bold text-foreground">
+                My people
+              </h2>
+              <p className="mt-2 max-w-2xl text-sm leading-relaxed text-muted-foreground">
+                Hostel roommates turned girl-gang — late-night talks, campus walks and the reason
+                being away from home never feels lonely.
+              </p>
+              <div className="mt-6 grid gap-5 sm:grid-cols-2">
+                {[
+                  { src: personalPhotos.roomates, alt: "Anamica with her hostel roommates on campus", caption: "The roommates" },
+                  { src: personalPhotos.roomates2, alt: "Anamica and her friends outdoors on a sunny day", caption: "Sunny-day walks" },
+                ].map((p, i) => (
+                  <Reveal key={p.caption} delay={i * 90}>
+                    <Tilt max={5}>
+                      <figure className={`glass glow-card rounded-2xl p-3 pb-4 ${i % 2 ? "rotate-1" : "-rotate-1"}`}>
+                        <img
+                          src={p.src}
+                          alt={p.alt}
+                          loading="lazy"
+                          className="h-72 w-full rounded-xl object-cover"
+                        />
+                        <figcaption className="mt-3 px-1 text-center text-xs font-medium text-muted-foreground">
+                          {p.caption}
+                        </figcaption>
+                      </figure>
+                    </Tilt>
+                  </Reveal>
+                ))}
+              </div>
+            </div>
+
             <Reveal className="mt-14">
               <div className="glass rounded-2xl p-6 text-center">
                 <p className="font-display text-lg font-bold text-foreground">
@@ -167,6 +199,7 @@ function MoreAboutMePage() {
                 </p>
               </div>
             </Reveal>
+
           </div>
         </section>
       </main>
