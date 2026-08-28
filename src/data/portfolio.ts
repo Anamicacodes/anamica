@@ -318,6 +318,20 @@ import mittalPodium from "@/assets/photos/podium.jpg.asset.json";
 import hypeCrew from "@/assets/photos/hype.jpg.asset.json";
 import googlify from "@/assets/photos/googlify.jpg.asset.json";
 import blazerCampus from "@/assets/photos/blazer.jpg.asset.json";
+import cdp1 from "@/assets/photos/cdp-1.jpg.asset.json";
+import cdp2 from "@/assets/photos/cdp-2.jpg.asset.json";
+import cdp3 from "@/assets/photos/cdp-3.jpg.asset.json";
+import cdp4 from "@/assets/photos/cdp-4.jpg.asset.json";
+import cdp5 from "@/assets/photos/cdp-5.jpg.asset.json";
+import cdpNews from "@/assets/photos/cdp-news.jpg.asset.json";
+import hackathonSquad from "@/assets/photos/hackathon.jpg.asset.json";
+import roomates from "@/assets/photos/roomates.jpg.asset.json";
+import roomates2 from "@/assets/photos/roomates2.jpg.asset.json";
+
+export const personalPhotos = {
+  roomates: roomates.url,
+  roomates2: roomates2.url,
+};
 
 export interface GalleryItem {
   label: string;
@@ -328,6 +342,7 @@ export interface GalleryItem {
 
 export const galleryCategories = [
   "All",
+  "CDP",
   "Public speaking",
   "Anchoring",
   "Community building",
@@ -339,6 +354,48 @@ export const galleryCategories = [
 ] as const;
 
 export const galleryItems: GalleryItem[] = [
+  {
+    label: "Critical thinking seminar, Jagraon",
+    category: "CDP",
+    date: "Jul 2026",
+    src: cdp3.url,
+  },
+  {
+    label: "Teaching machine language basics",
+    category: "CDP",
+    date: "Jul 2026",
+    src: cdp1.url,
+  },
+  {
+    label: "Session with students, Salempura Road school",
+    category: "CDP",
+    date: "Jul 2026",
+    src: cdp2.url,
+  },
+  {
+    label: "Outdoor session, Sadarpura Road school",
+    category: "CDP",
+    date: "Jul 2026",
+    src: cdp4.url,
+  },
+  {
+    label: "Full house at the CDP workshop",
+    category: "CDP",
+    date: "Jul 2026",
+    src: cdp5.url,
+  },
+  {
+    label: "Newspaper coverage of the critical thinking seminar",
+    category: "CDP",
+    date: "Jul 2026",
+    src: cdpNews.url,
+  },
+  {
+    label: "Hackmanthan 2025 squad",
+    category: "Hackathons",
+    date: "2025",
+    src: hackathonSquad.url,
+  },
   {
     label: "At the Indian Science Congress, LPU",
     category: "Public speaking",
@@ -361,8 +418,9 @@ export const galleryItems: GalleryItem[] = [
     src: hypeCrew.url,
   },
   {
-    label: "With the team after the event",
+    label: "With the Hackmanthan 2025 team",
     category: "Team activities",
+    date: "2025",
     src: teamCrew.url,
   },
   {
@@ -382,6 +440,7 @@ export const galleryItems: GalleryItem[] = [
     src: vguJaipur.url,
   },
 ];
+
 
 export interface Milestone {
   title: string;

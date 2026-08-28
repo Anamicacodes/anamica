@@ -41,8 +41,9 @@ export function About() {
           title="Curious by default, driven by people"
         />
 
-        <div className="mt-14 grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
-          <Reveal className="space-y-5 text-base leading-relaxed text-muted-foreground">
+        <div className="mt-14 grid items-start gap-10 lg:grid-cols-[1.05fr_0.95fr]">
+          <Reveal className="flex h-full flex-col space-y-5 text-base leading-relaxed text-muted-foreground">
+
             <p>
               I'm a first-year B.Tech Computer Science and Engineering student at{" "}
               <span className="font-semibold text-foreground">
@@ -90,7 +91,42 @@ export function About() {
                 </span>
               ))}
             </div>
+
+            {/* Fills the lower-left space and points to the CDP work */}
+            <div className="mt-auto grid gap-4 pt-2 sm:grid-cols-2">
+              <div className="glass glow-card rounded-2xl p-5">
+                <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
+                  Right now
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-foreground">
+                  Community Development Project — summer training with TCTC, running critical
+                  thinking and tech-literacy sessions in Punjab government schools.
+                </p>
+                <a
+                  href="/#gallery"
+                  className="mt-3 inline-block text-xs font-semibold text-primary hover:underline"
+                >
+                  See CDP photos →
+                </a>
+              </div>
+              <div className="glass rounded-2xl p-5">
+                <p className="text-[11px] font-semibold uppercase tracking-widest text-muted-foreground">
+                  Beyond the résumé
+                </p>
+                <p className="mt-2 text-sm leading-relaxed text-foreground">
+                  12 years of Kathak, Bharatanatyam and classical dance, plus poetry, sketching and
+                  a hostel girl-gang that keeps me sane.
+                </p>
+                <a
+                  href="/more-about-me"
+                  className="mt-3 inline-block text-xs font-semibold text-primary hover:underline"
+                >
+                  More about me →
+                </a>
+              </div>
+            </div>
           </Reveal>
+
 
           <div className="grid gap-4 sm:grid-cols-2">
             <Reveal className="sm:col-span-2">
