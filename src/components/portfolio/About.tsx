@@ -125,6 +125,7 @@ export function About() {
                 </a>
               </div>
             </div>
+          </Reveal>
 
 
           <div className="grid gap-4 sm:grid-cols-2">
