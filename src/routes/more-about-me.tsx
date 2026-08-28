@@ -3,6 +3,8 @@ import { ArrowLeft, Music4, PenLine, Palette, Trophy, Heart, Sparkles } from "lu
 import { Navbar } from "@/components/portfolio/Navbar";
 import { Footer } from "@/components/portfolio/Contact";
 import { CursorGlow, Reveal, SectionHeading, Tilt } from "@/components/portfolio/ui";
+import { personalPhotos } from "@/data/portfolio";
+
 
 export const Route = createFileRoute("/more-about-me")({
   head: () => ({
