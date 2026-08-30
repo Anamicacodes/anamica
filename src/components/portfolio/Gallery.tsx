@@ -10,8 +10,8 @@ interface Card {
   key: string;
   label: string;
   category: string;
-  date?: string;
-  src?: string;
+  date?: string | undefined;
+  src?: string | undefined;
   photos: GalleryItem[];
   count: number;
 }
