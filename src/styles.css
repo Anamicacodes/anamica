@@ -42,66 +42,67 @@
 }
 
 :root {
-  --radius: 1rem;
+  --radius: 1.25rem;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
   --font-sans: "Manrope", ui-sans-serif, system-ui, sans-serif;
 
-  /* Deep navy "night campus" palette — default dark theme */
-  --background: oklch(0.16 0.03 264);
-  --foreground: oklch(0.95 0.015 255);
-  --card: oklch(0.21 0.035 262);
-  --card-foreground: oklch(0.95 0.015 255);
-  --popover: oklch(0.21 0.035 262);
-  --popover-foreground: oklch(0.95 0.015 255);
-  --primary: oklch(0.68 0.17 235); /* electric blue */
-  --primary-foreground: oklch(0.15 0.03 264);
-  --secondary: oklch(0.28 0.05 268);
-  --secondary-foreground: oklch(0.93 0.02 260);
-  --muted: oklch(0.25 0.04 264);
-  --muted-foreground: oklch(0.74 0.03 258);
-  --accent: oklch(0.66 0.19 300); /* violet */
-  --accent-foreground: oklch(0.97 0.01 300);
-  --coral: oklch(0.74 0.16 35); /* warm coral */
-  --coral-foreground: oklch(0.16 0.03 30);
-  --destructive: oklch(0.68 0.2 22);
-  --destructive-foreground: oklch(0.97 0.01 20);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 14%);
-  --ring: oklch(0.68 0.17 235);
+  /* Warm sand + deep maroon — default light theme */
+  --background: oklch(0.87 0.028 76);
+  --foreground: oklch(0.28 0.07 22);
+  --card: oklch(0.94 0.022 80);
+  --card-foreground: oklch(0.28 0.07 22);
+  --popover: oklch(0.94 0.022 80);
+  --popover-foreground: oklch(0.28 0.07 22);
+  --primary: oklch(0.38 0.13 20); /* deep maroon */
+  --primary-foreground: oklch(0.96 0.02 80);
+  --secondary: oklch(0.91 0.03 74);
+  --secondary-foreground: oklch(0.32 0.09 22);
+  --muted: oklch(0.9 0.025 76);
+  --muted-foreground: oklch(0.46 0.05 40);
+  --accent: oklch(0.48 0.12 18); /* brick red */
+  --accent-foreground: oklch(0.96 0.02 80);
+  --coral: oklch(0.66 0.1 62); /* warm caramel */
+  --coral-foreground: oklch(0.2 0.05 40);
+  --destructive: oklch(0.5 0.18 25);
+  --destructive-foreground: oklch(0.97 0.01 60);
+  --border: oklch(0.34 0.08 24 / 16%);
+  --input: oklch(0.34 0.08 24 / 22%);
+  --ring: oklch(0.38 0.13 20);
 
-  --glow-blue: oklch(0.68 0.17 235 / 35%);
-  --glow-violet: oklch(0.66 0.19 300 / 30%);
-  --glow-coral: oklch(0.74 0.16 35 / 28%);
+  --glow-blue: oklch(0.38 0.13 20 / 22%);
+  --glow-violet: oklch(0.48 0.12 18 / 20%);
+  --glow-coral: oklch(0.66 0.1 62 / 22%);
 }
 
-/* Light "day campus" palette — toggled via .light on <html> */
-.light {
-  --background: oklch(0.97 0.008 250);
-  --foreground: oklch(0.24 0.045 264);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.24 0.045 264);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.24 0.045 264);
-  --primary: oklch(0.55 0.19 252); /* electric blue, darker for contrast */
-  --primary-foreground: oklch(0.98 0.005 255);
-  --secondary: oklch(0.93 0.015 258);
-  --secondary-foreground: oklch(0.28 0.05 264);
-  --muted: oklch(0.94 0.012 258);
-  --muted-foreground: oklch(0.45 0.04 262);
-  --accent: oklch(0.52 0.2 300); /* violet */
-  --accent-foreground: oklch(0.98 0.005 300);
-  --coral: oklch(0.62 0.17 38); /* warm coral, deepened */
-  --coral-foreground: oklch(0.98 0.01 40);
-  --destructive: oklch(0.58 0.2 25);
-  --destructive-foreground: oklch(0.98 0.01 20);
-  --border: oklch(0.25 0.04 264 / 12%);
-  --input: oklch(0.25 0.04 264 / 18%);
-  --ring: oklch(0.55 0.19 252);
+/* Darker version of the same warm maroon world — toggled via .dark on <html> */
+.dark {
+  --background: oklch(0.19 0.03 30);
+  --foreground: oklch(0.93 0.02 76);
+  --card: oklch(0.25 0.05 24);
+  --card-foreground: oklch(0.93 0.02 76);
+  --popover: oklch(0.25 0.05 24);
+  --popover-foreground: oklch(0.93 0.02 76);
+  --primary: oklch(0.62 0.15 22); /* lifted maroon */
+  --primary-foreground: oklch(0.97 0.015 78);
+  --secondary: oklch(0.3 0.05 28);
+  --secondary-foreground: oklch(0.92 0.02 76);
+  --muted: oklch(0.27 0.04 30);
+  --muted-foreground: oklch(0.78 0.03 70);
+  --accent: oklch(0.72 0.1 45); /* warm clay */
+  --accent-foreground: oklch(0.2 0.05 30);
+  --coral: oklch(0.8 0.1 72); /* sand */
+  --coral-foreground: oklch(0.2 0.05 40);
+  --destructive: oklch(0.62 0.19 25);
+  --destructive-foreground: oklch(0.97 0.01 40);
+  --border: oklch(0.95 0.03 76 / 12%);
+  --input: oklch(0.95 0.03 76 / 16%);
+  --ring: oklch(0.62 0.15 22);
 
-  --glow-blue: oklch(0.55 0.19 252 / 22%);
-  --glow-violet: oklch(0.52 0.2 300 / 18%);
-  --glow-coral: oklch(0.62 0.17 38 / 20%);
+  --glow-blue: oklch(0.62 0.15 22 / 32%);
+  --glow-violet: oklch(0.72 0.1 45 / 26%);
+  --glow-coral: oklch(0.8 0.1 72 / 24%);
 }
+
 
 @layer base {
   * {

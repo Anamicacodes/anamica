@@ -2,18 +2,18 @@ import { useEffect, useState } from "react";
 import { Moon, Sun } from "lucide-react";
 
 export function ThemeToggle() {
-  const [light, setLight] = useState(false);
+  const [dark, setDark] = useState(false);
 
   useEffect(() => {
-    setLight(document.documentElement.classList.contains("light"));
+    setDark(document.documentElement.classList.contains("dark"));
   }, []);
 
   const toggle = () => {
-    const next = !light;
-    setLight(next);
-    document.documentElement.classList.toggle("light", next);
+    const next = !dark;
+    setDark(next);
+    document.documentElement.classList.toggle("dark", next);
     try {
-      localStorage.setItem("theme", next ? "light" : "dark");
+      localStorage.setItem("theme", next ? "dark" : "light");
     } catch {
       /* private mode — ignore */
     }
@@ -23,11 +23,11 @@ export function ThemeToggle() {
     <button
       type="button"
       onClick={toggle}
-      aria-label={light ? "Switch to dark theme" : "Switch to light theme"}
-      aria-pressed={light}
+      aria-label={dark ? "Switch to light theme" : "Switch to dark theme"}
+      aria-pressed={dark}
       className="grid size-10 place-items-center rounded-xl border border-border text-muted-foreground transition-colors hover:text-foreground"
     >
-      {light ? <Moon className="size-4" /> : <Sun className="size-4" />}
+      {dark ? <Sun className="size-4" /> : <Moon className="size-4" />}
     </button>
   );
 }
