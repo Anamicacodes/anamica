@@ -11,6 +11,7 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as CertificatesRouteImport } from './routes/certificates'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as MoreAboutMeRouteImport } from './routes/more-about-me'
 
 const IndexRoute = IndexRouteImport.update({
@@ -23,6 +24,11 @@ const CertificatesRoute = CertificatesRouteImport.update({
   path: '/certificates',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const MoreAboutMeRoute = MoreAboutMeRouteImport.update({
   id: '/more-about-me',
   path: '/more-about-me',
@@ -32,30 +38,34 @@ const MoreAboutMeRoute = MoreAboutMeRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/certificates': typeof CertificatesRoute
+  '/gallery': typeof GalleryRoute
   '/more-about-me': typeof MoreAboutMeRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/certificates': typeof CertificatesRoute
+  '/gallery': typeof GalleryRoute
   '/more-about-me': typeof MoreAboutMeRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/certificates': typeof CertificatesRoute
+  '/gallery': typeof GalleryRoute
   '/more-about-me': typeof MoreAboutMeRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/certificates' | '/more-about-me'
+  fullPaths: '/' | '/certificates' | '/gallery' | '/more-about-me'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/certificates' | '/more-about-me'
-  id: '__root__' | '/' | '/certificates' | '/more-about-me'
+  to: '/' | '/certificates' | '/gallery' | '/more-about-me'
+  id: '__root__' | '/' | '/certificates' | '/gallery' | '/more-about-me'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   CertificatesRoute: typeof CertificatesRoute
+  GalleryRoute: typeof GalleryRoute
   MoreAboutMeRoute: typeof MoreAboutMeRoute
 }
 
@@ -75,6 +85,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof CertificatesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/more-about-me': {
       id: '/more-about-me'
       path: '/more-about-me'
@@ -88,6 +105,7 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   CertificatesRoute: CertificatesRoute,
+  GalleryRoute: GalleryRoute,
   MoreAboutMeRoute: MoreAboutMeRoute,
 }
 export const routeTree = rootRouteImport
