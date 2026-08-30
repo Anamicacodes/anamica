@@ -196,8 +196,8 @@ function MoreAboutMePage() {
                   Currently on my wish-list
                 </p>
                 <p className="mx-auto mt-2 max-w-xl text-sm leading-relaxed text-muted-foreground">
-                  Getting back to regular riyaaz, finishing a sketchbook end to end, and writing
-                  one poem a month — however small.
+                  Learning guitar, picking up swimming, and hitting the gym regularly — small
+                  goals, consistently chased.
                 </p>
               </div>
             </Reveal>

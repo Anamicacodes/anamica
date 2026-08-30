@@ -317,6 +317,7 @@ import pravirbhavTalk from "@/assets/photos/talk.jpg.asset.json";
 import mittalPodium from "@/assets/photos/podium.jpg.asset.json";
 import hypeCrew from "@/assets/photos/hype.jpg.asset.json";
 import googlify from "@/assets/photos/googlify.jpg.asset.json";
+import arenaTeam from "@/assets/photos/arena-team.jpg.asset.json";
 import blazerCampus from "@/assets/photos/blazer.jpg.asset.json";
 import cdp1 from "@/assets/photos/cdp-1.jpg.asset.json";
 import cdp2 from "@/assets/photos/cdp-2.jpg.asset.json";
@@ -416,6 +417,12 @@ export const galleryItems: GalleryItem[] = [
     label: "Hype crew on stage, VGU Jaipur",
     category: "Community building",
     src: hypeCrew.url,
+  },
+  {
+    label: "Team Arena, seated for the competition rounds",
+    category: "Team activities",
+    date: "Aug 2026",
+    src: arenaTeam.url,
   },
   {
     label: "With the Hackmanthan 2025 team",
