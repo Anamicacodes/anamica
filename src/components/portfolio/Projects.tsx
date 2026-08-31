@@ -1,6 +1,12 @@
-import { Github, ExternalLink, ShoppingBag, Sparkles, Image as ImageIcon } from "lucide-react";
+import { Github, ExternalLink, ShoppingBag, Sparkles, Image as ImageIcon, Gamepad2, DoorOpen } from "lucide-react";
 import { projects } from "@/data/portfolio";
 import { Reveal, SectionHeading, Tilt } from "./ui";
+
+function projectIcon(title: string) {
+  if (/game|tic-tac-toe|snake|rock/i.test(title)) return Gamepad2;
+  if (/classroom|touch/i.test(title)) return DoorOpen;
+  return ShoppingBag;
+}
 
 export function Projects() {
   return (
