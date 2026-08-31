@@ -94,7 +94,8 @@ export function Projects() {
                 </article>
               </Tilt>
             </Reveal>
-          ))}
+            );
+          })}
 
           {/* Placeholder for future projects */}
           <Reveal delay={200}>
