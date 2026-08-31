@@ -5,15 +5,15 @@
  * PRIVACY RULE: never store full credential IDs. Use masked form only (e.g. "XXXX-XXXX-4115").
  */
 
-import portraitPhoto from "@/assets/photos/portrait.jpg.asset.json";
-import heroPhoto from "@/assets/photos/hero-2.jpg.asset.json";
-import teachingPhoto from "@/assets/photos/teaching.jpg.asset.json";
-import resumePdf from "@/assets/anamica-resume.pdf.asset.json";
+import portraitPhoto from "@/assets/photos/portrait.jpg";
+import heroPhoto from "@/assets/photos/hero-2.jpg";
+import teachingPhoto from "@/assets/photos/teaching.jpg";
+import resumePdf from "@/assets/anamica-resume.pdf";
 
 export const photos = {
-  hero: heroPhoto.url,
-  portrait: portraitPhoto.url,
-  teaching: teachingPhoto.url,
+  hero: heroPhoto,
+  portrait: portraitPhoto,
+  teaching: teachingPhoto,
 };
 
 export const profile = {
@@ -28,7 +28,7 @@ export const profile = {
   email: "anamicagupta246@gmail.com",
   linkedin: "https://www.linkedin.com/in/ana2406/",
   github: "https://github.com/Anamicacodes",
-  cvUrl: resumePdf.url,
+  cvUrl: resumePdf,
 };
 
 export interface SkillGroup {
@@ -363,28 +363,28 @@ export const certCategories: Array<"All" | CertCategory> = [
   "Workshops",
 ];
 
-import scienceCongress from "@/assets/photos/science-congress.jpg.asset.json";
-import vguJaipur from "@/assets/photos/vgu.jpg.asset.json";
-import teamCrew from "@/assets/photos/team.jpg.asset.json";
-import pravirbhavTalk from "@/assets/photos/talk.jpg.asset.json";
-import mittalPodium from "@/assets/photos/podium.jpg.asset.json";
-import hypeCrew from "@/assets/photos/hype.jpg.asset.json";
-import googlify from "@/assets/photos/googlify.jpg.asset.json";
-import arenaTeam from "@/assets/photos/arena-team.jpg.asset.json";
-import blazerCampus from "@/assets/photos/blazer.jpg.asset.json";
-import cdp1 from "@/assets/photos/cdp-1.jpg.asset.json";
-import cdp2 from "@/assets/photos/cdp-2.jpg.asset.json";
-import cdp3 from "@/assets/photos/cdp-3.jpg.asset.json";
-import cdp4 from "@/assets/photos/cdp-4.jpg.asset.json";
-import cdp5 from "@/assets/photos/cdp-5.jpg.asset.json";
-import cdpNews from "@/assets/photos/cdp-news.jpg.asset.json";
-import hackathonSquad from "@/assets/photos/hackathon.jpg.asset.json";
-import roomates from "@/assets/photos/roomates.jpg.asset.json";
-import roomates2 from "@/assets/photos/roomates2.jpg.asset.json";
+import scienceCongress from "@/assets/photos/science-congress.jpg";
+import vguJaipur from "@/assets/photos/vgu.jpg";
+import teamCrew from "@/assets/photos/team.jpg";
+import pravirbhavTalk from "@/assets/photos/talk.jpg";
+import mittalPodium from "@/assets/photos/podium.jpg";
+import hypeCrew from "@/assets/photos/hype.jpg";
+import googlify from "@/assets/photos/googlify.jpg";
+import arenaTeam from "@/assets/photos/arena-team.jpg";
+import blazerCampus from "@/assets/photos/blazer.jpg";
+import cdp1 from "@/assets/photos/cdp-1.jpg";
+import cdp2 from "@/assets/photos/cdp-2.jpg";
+import cdp3 from "@/assets/photos/cdp-3.jpg";
+import cdp4 from "@/assets/photos/cdp-4.jpg";
+import cdp5 from "@/assets/photos/cdp-5.jpg";
+import cdpNews from "@/assets/photos/cdp-news.jpg";
+import hackathonSquad from "@/assets/photos/hackathon.jpg";
+import roomates from "@/assets/photos/roomates.jpg";
+import roomates2 from "@/assets/photos/roomates2.jpg";
 
 export const personalPhotos = {
-  roomates: roomates.url,
-  roomates2: roomates2.url,
+  roomates: roomates,
+  roomates2: roomates2,
 };
 
 export interface GalleryItem {
@@ -412,92 +412,92 @@ export const galleryItems: GalleryItem[] = [
     label: "Critical thinking seminar, Jagraon",
     category: "CDP",
     date: "Jul 2026",
-    src: cdp3.url,
+    src: cdp3,
   },
   {
     label: "Teaching machine language basics",
     category: "CDP",
     date: "Jul 2026",
-    src: cdp1.url,
+    src: cdp1,
   },
   {
     label: "Session with students, Salempura Road school",
     category: "CDP",
     date: "Jul 2026",
-    src: cdp2.url,
+    src: cdp2,
   },
   {
     label: "Outdoor session, Sadarpura Road school",
     category: "CDP",
     date: "Jul 2026",
-    src: cdp4.url,
+    src: cdp4,
   },
   {
     label: "Full house at the CDP workshop",
     category: "CDP",
     date: "Jul 2026",
-    src: cdp5.url,
+    src: cdp5,
   },
   {
     label: "Newspaper coverage of the critical thinking seminar",
     category: "CDP",
     date: "Jul 2026",
-    src: cdpNews.url,
+    src: cdpNews,
   },
   {
     label: "Hackmanthan 2025 squad",
     category: "Hackathons",
     date: "2025",
-    src: hackathonSquad.url,
+    src: hackathonSquad,
   },
   {
     label: "At the Indian Science Congress, LPU",
     category: "Public speaking",
     date: "Jan 2024",
-    src: scienceCongress.url,
+    src: scienceCongress,
   },
   {
     label: "Presenting at Avirbhav, LPU",
     category: "Public speaking",
-    src: pravirbhavTalk.url,
+    src: pravirbhavTalk,
   },
   {
     label: "On the podium at Mittal School of Business",
     category: "Anchoring",
-    src: mittalPodium.url,
+    src: mittalPodium,
   },
   {
     label: "Hype crew on stage, VGU Jaipur",
     category: "Community building",
-    src: hypeCrew.url,
+    src: hypeCrew,
   },
   {
     label: "Team Arena, seated for the competition rounds",
     category: "Team activities",
     date: "Aug 2026",
-    src: arenaTeam.url,
+    src: arenaTeam,
   },
   {
     label: "With the Hackmanthan 2025 team",
     category: "Team activities",
     date: "2025",
-    src: teamCrew.url,
+    src: teamCrew,
   },
   {
     label: "Googlify 2024 at LPU",
     category: "Learning & networking",
     date: "Sep 2024",
-    src: googlify.url,
+    src: googlify,
   },
   {
     label: "Campus formals day",
     category: "Campus events",
-    src: blazerCampus.url,
+    src: blazerCampus,
   },
   {
     label: "Visiting VGU Jaipur",
     category: "Campus events",
-    src: vguJaipur.url,
+    src: vguJaipur,
   },
 ];
 
