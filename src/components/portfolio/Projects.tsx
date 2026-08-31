@@ -19,14 +19,16 @@ export function Projects() {
         />
 
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
-          {projects.map((p, i) => (
+          {projects.map((p, i) => {
+            const ProjectIcon = projectIcon(p.title);
+            return (
             <Reveal key={p.title} delay={i * 100}>
               <Tilt className="h-full" max={5}>
                 <article className="glass glow-card flex h-full flex-col overflow-hidden rounded-3xl">
                   {/* TODO: replace with project screenshots */}
                   <div className="relative grid h-48 place-items-center overflow-hidden border-b border-border bg-secondary/50">
                     <div className="bg-grid absolute inset-0 opacity-50" aria-hidden="true" />
-                    <ShoppingBag className="relative size-12 text-primary" aria-hidden="true" />
+                    <ProjectIcon className="relative size-12 text-primary" aria-hidden="true" />
                     <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-coral px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-coral-foreground">
                       <Sparkles className="size-3" aria-hidden="true" />
                       {p.status}
