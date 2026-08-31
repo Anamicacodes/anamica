@@ -155,6 +155,59 @@ export const projects: Project[] = [
       "Scalable frontend structure",
     ],
   },
+  {
+    title: "Free Classroom Finder — LPU Touch",
+    status: "Ongoing",
+    inDevelopment: true,
+    tech: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A web page on the LPU Touch app that scans the university timetable and lists classrooms that are free at any given slot — so students can quickly find a place to study, practise or hold a session.",
+    features: [
+      "Matches free rooms against the live timetable",
+      "Filter by block and time slot",
+      "Built for the LPU Touch platform",
+      "Made for students, by a student",
+    ],
+  },
+  {
+    title: "Tic-Tac-Toe",
+    status: "Completed",
+    tech: ["HTML", "CSS", "JavaScript"],
+    description:
+      "The classic two-player grid game in the browser — clean UI, instant restarts and win detection.",
+    features: [
+      "Two-player mode",
+      "Win & draw detection",
+      "Score tracking",
+      "One-click restart",
+    ],
+  },
+  {
+    title: "Snake Game",
+    status: "Completed",
+    tech: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A retro-style snake game with smooth keyboard controls, growing difficulty and a high-score chase.",
+    features: [
+      "Keyboard controls",
+      "Speed ramps up as you grow",
+      "High-score tracking",
+      "Collision & boundary logic",
+    ],
+  },
+  {
+    title: "Rock · Paper · Scissors",
+    status: "Completed",
+    tech: ["HTML", "CSS", "JavaScript"],
+    description:
+      "A quick-play game against the computer with animated results and a running scoreboard.",
+    features: [
+      "Play vs computer",
+      "Randomised computer moves",
+      "Animated result reveal",
+      "Session scoreboard",
+    ],
+  },
 ];
 
 export type CertCategory =
