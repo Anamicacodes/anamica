@@ -70,7 +70,9 @@ export function Experience() {
                     ))}
                     {exp.certificate && (
                       <a
-                        href="#certificates"
+                        href={`/certificates?cert=${encodeURIComponent(exp.certificate)}`}
+                        target="_blank"
+                        rel="noreferrer"
                         className="ml-auto inline-flex items-center gap-1.5 rounded-full bg-secondary px-3.5 py-1.5 text-xs font-semibold text-secondary-foreground transition-colors hover:bg-primary hover:text-primary-foreground"
                       >
                         <Award className="size-3.5" aria-hidden="true" />

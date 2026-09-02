@@ -1,5 +1,5 @@
 import { useState, type FormEvent } from "react";
-import { Github, Linkedin, Mail, Send, Heart } from "lucide-react";
+import { Github, Linkedin, Mail, Send, Heart, Compass, ArrowUpRight } from "lucide-react";
 import { profile } from "@/data/portfolio";
 import { Reveal, SectionHeading } from "./ui";
 
@@ -158,6 +158,83 @@ export function Contact() {
   );
 }
 
+const onlineProfiles = [
+  {
+    label: "LinkedIn",
+    handle: "in/ana2406",
+    href: profile.linkedin,
+    Icon: Linkedin,
+    blurb: "Updates, events and everything I'm learning.",
+  },
+  {
+    label: "GitHub",
+    handle: "@Anamicacodes",
+    href: profile.github,
+    Icon: Github,
+    blurb: "Code, experiments and works in progress.",
+  },
+  {
+    label: "Email",
+    handle: profile.email,
+    href: `mailto:${profile.email}`,
+    Icon: Mail,
+    blurb: "The fastest way to reach me directly.",
+  },
+];
+
+export function FindMeOnline() {
+  return (
+    <section id="find-me-online" className="relative pb-24">
+      <div className="relative mx-auto max-w-4xl px-6">
+        <SectionHeading
+          eyebrow="Find me online"
+          title="Where I show up"
+          description="The places I actually post, build and reply from."
+        />
+
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {onlineProfiles.map((p, i) => (
+            <Reveal key={p.label} delay={i * 80}>
+              <a
+                href={p.href}
+                target="_blank"
+                rel="noreferrer"
+                className="glass glow-card group flex h-full flex-col rounded-2xl p-5 transition-transform hover:-translate-y-1"
+              >
+                <div className="flex items-center justify-between gap-3">
+                  <span className="grid size-10 place-items-center rounded-xl bg-secondary">
+                    <p.Icon className="size-4 text-primary" aria-hidden="true" />
+                  </span>
+                  <ArrowUpRight
+                    className="size-4 text-muted-foreground transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+                    aria-hidden="true"
+                  />
+                </div>
+                <h3 className="mt-4 font-display text-base font-bold text-foreground">{p.label}</h3>
+                <p className="mt-1 break-all text-xs font-medium text-primary">{p.handle}</p>
+                <p className="mt-2 text-xs leading-relaxed text-muted-foreground">{p.blurb}</p>
+              </a>
+            </Reveal>
+          ))}
+        </div>
+
+        <Reveal className="mt-10">
+          <div className="glass rounded-3xl p-6 text-center sm:p-8">
+            <Compass className="mx-auto size-6 text-accent" aria-hidden="true" />
+            <p className="mt-3 text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+              Goal &amp; vision
+            </p>
+            <p className="mx-auto mt-3 max-w-2xl font-display text-lg font-bold leading-relaxed text-foreground sm:text-xl">
+              “My goal is to build something of my own, create meaningful work, and have the
+              freedom to pursue the things I truly believe in.”
+            </p>
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
+
 export function Footer() {
   return (
     <footer className="border-t border-border py-10">
@@ -170,6 +247,7 @@ export function Footer() {
         <a href="#home" className="text-xs font-semibold text-primary hover:underline">
           Back to top ↑
         </a>
+        <p className="text-[11px] text-muted-foreground/80">Last updated · September 2026</p>
       </div>
     </footer>
   );
