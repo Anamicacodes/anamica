@@ -28,7 +28,13 @@ const toCard = (g: GalleryItem): Card => ({
 
 export function Gallery({ full = false }: { full?: boolean }) {
   const [category, setCategory] = useState<string>("All");
-  const [lightbox, setLightbox] = useState<{ photos: GalleryItem[]; index: number } | null>(null);
+  const [photos, setPhotos] = useState<GalleryItem[] | null>(null);
+  const [index, setIndex] = useState(0);
+
+  const openLightbox = useCallback((list: GalleryItem[], i: number) => {
+    setPhotos(list);
+    setIndex(i);
+  }, []);
 
   const cards = useMemo<Card[]>(() => {
     if (full) {
@@ -51,17 +57,20 @@ export function Gallery({ full = false }: { full?: boolean }) {
     return [album, ...rest.map(toCard)].slice(0, 8);
   }, [full, category]);
 
-  const close = useCallback(() => setLightbox(null), []);
+  const close = useCallback(() => setPhotos(null), []);
   const step = useCallback(
-    (dir: 1 | -1) =>
-      setLightbox((l) =>
-        l ? { ...l, index: (l.index + dir + l.photos.length) % l.photos.length } : l,
-      ),
-    [],
+    (dir: 1 | -1) => {
+      setIndex((i) => {
+        const len = photos?.length ?? 0;
+        if (len === 0) return i;
+        return (i + dir + len) % len;
+      });
+    },
+    [photos],
   );
 
   useEffect(() => {
-    if (!lightbox) return;
+    if (!photos) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") close();
       if (e.key === "ArrowRight") step(1);
@@ -73,9 +82,9 @@ export function Gallery({ full = false }: { full?: boolean }) {
       document.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [lightbox, close, step]);
+  }, [photos, close, step]);
 
-  const active = lightbox ? lightbox.photos[lightbox.index] : null;
+  const active = photos ? photos[index] : null;
 
   return (
     <section id="gallery" className="py-24">
@@ -112,7 +121,7 @@ export function Gallery({ full = false }: { full?: boolean }) {
             <Reveal key={c.key} delay={Math.min(i, 6) * 70} className="break-inside-avoid">
               <button
                 type="button"
-                onClick={() => setLightbox({ photos: c.photos, index: 0 })}
+                onClick={() => openLightbox(c.photos, 0)}
                 aria-label={c.count > 1 ? `Open ${c.label} album (${c.count} photos)` : `Open ${c.label}`}
                 className={`glass group block w-full overflow-hidden rounded-2xl p-2 pb-3 text-left transition-transform duration-300 hover:z-10 hover:rotate-0 hover:scale-[1.04] ${rotations[i % rotations.length]}`}
               >
@@ -165,7 +174,7 @@ export function Gallery({ full = false }: { full?: boolean }) {
       </div>
 
       {/* Lightbox */}
-      {active && lightbox && (
+      {active && photos && (
         <div
           role="dialog"
           aria-modal="true"
@@ -190,6 +199,7 @@ export function Gallery({ full = false }: { full?: boolean }) {
             </div>
             {active.src ? (
               <img
+                key={active.src}
                 src={active.src}
                 alt={active.label}
                 className="mt-3 max-h-[60vh] w-full rounded-2xl object-contain"
@@ -211,9 +221,7 @@ export function Gallery({ full = false }: { full?: boolean }) {
               <p className="text-xs text-muted-foreground">
                 {active.category}
                 {active.date ? ` · ${active.date}` : ""}
-                {lightbox.photos.length > 1
-                  ? ` · ${lightbox.index + 1}/${lightbox.photos.length}`
-                  : ""}
+                {photos.length > 1 ? ` · ${index + 1}/${photos.length}` : ""}
               </p>
               <button
                 type="button"
@@ -224,16 +232,16 @@ export function Gallery({ full = false }: { full?: boolean }) {
                 <ChevronRight className="size-5" />
               </button>
             </div>
-            {lightbox.photos.length > 1 && (
+            {photos.length > 1 && (
               <div className="mt-3 flex gap-2 overflow-x-auto pb-1">
-                {lightbox.photos.map((p, i) => (
+                {photos.map((p, i) => (
                   <button
                     key={p.label}
                     type="button"
-                    onClick={() => setLightbox({ photos: lightbox.photos, index: i })}
+                    onClick={() => setIndex(i)}
                     aria-label={`Show ${p.label}`}
                     className={`size-14 shrink-0 overflow-hidden rounded-lg border transition-opacity ${
-                      i === lightbox.index ? "border-accent" : "border-border opacity-60 hover:opacity-100"
+                      i === index ? "border-accent" : "border-border opacity-60 hover:opacity-100"
                     }`}
                   >
                     {p.src ? (
