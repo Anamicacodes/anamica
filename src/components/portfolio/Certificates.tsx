@@ -71,6 +71,22 @@ export function Certificates() {
   const [query, setQuery] = useState("");
   const [active, setActive] = useState<Certificate | null>(null);
 
+  // Deep-link support: /certificates?cert=<title> opens that certificate directly.
+  useEffect(() => {
+    const wanted = new URLSearchParams(window.location.search).get("cert");
+    if (!wanted) return;
+    const norm = (v: string) => v.toLowerCase();
+    const match =
+      certificates.find((c) => norm(c.title) === norm(wanted)) ??
+      certificates.find(
+        (c) => norm(wanted).includes(norm(c.title)) || norm(c.title).includes(norm(wanted)),
+      );
+    if (match) {
+      setQuery(match.title);
+      setActive(match);
+    }
+  }, []);
+
   const filtered = useMemo(
     () =>
       certificates.filter(
