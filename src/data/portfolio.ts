@@ -98,15 +98,16 @@ export const experiences: Experience[] = [
     certificate: "Google Student Ambassador Program — Certificate of Participation",
   },
   {
-    role: "Brand Face",
+    role: "Brand Face — EventEye",
     org: "EventEye",
     period: "September 2025 – October 2025",
     location: "Jalandhar, Punjab, India",
     logoInitial: "E",
     points: [
+      "EventEye is a startup that manages events across India, working closely with colleges and universities.",
       "Represented EventEye as an official Brand Face.",
       "Supported student outreach, digital engagement, and community representation.",
-      "Helped strengthen EventEye's presence among student communities.",
+      "Helped strengthen EventEye's presence among student communities and campus networks.",
     ],
     skills: ["Branding", "Outreach", "Digital Engagement"],
   },
@@ -136,6 +137,7 @@ export interface Project {
   // TODO: add real links when available
   liveUrl?: string;
   githubUrl?: string;
+  tier?: "major" | "mini";
 }
 
 export const projects: Project[] = [
@@ -144,10 +146,11 @@ export const projects: Project[] = [
     status: "Currently in development",
     inDevelopment: true,
     tech: ["HTML", "CSS", "JavaScript"],
+    tier: "major",
     description:
-      "A responsive e-commerce website for a sweater and clothing brand, focused on a modern, user-friendly shopping experience.",
+      "A winter-wear clothing brand concept I am currently developing, focused on creating a cozy, stylish and youthful identity for winter fashion.",
     features: [
-      "Product listings & category browsing",
+      "Cozy cardigans & winter-wear listings",
       "Product-detail pages",
       "Shopping cart functionality",
       "Responsive navigation",
@@ -159,6 +162,7 @@ export const projects: Project[] = [
     title: "Free Classroom Finder — LPU Touch",
     status: "Ongoing",
     inDevelopment: true,
+    tier: "major",
     tech: ["HTML", "CSS", "JavaScript"],
     description:
       "A web page on the LPU Touch app that scans the university timetable and lists classrooms that are free at any given slot — so students can quickly find a place to study, practise or hold a session.",
@@ -172,6 +176,7 @@ export const projects: Project[] = [
   {
     title: "Tic-Tac-Toe",
     status: "Completed",
+    tier: "mini",
     tech: ["HTML", "CSS", "JavaScript"],
     description:
       "The classic two-player grid game in the browser — clean UI, instant restarts and win detection.",
@@ -185,6 +190,7 @@ export const projects: Project[] = [
   {
     title: "Snake Game",
     status: "Completed",
+    tier: "mini",
     tech: ["HTML", "CSS", "JavaScript"],
     description:
       "A retro-style snake game with smooth keyboard controls, growing difficulty and a high-score chase.",
@@ -198,6 +204,7 @@ export const projects: Project[] = [
   {
     title: "Rock · Paper · Scissors",
     status: "Completed",
+    tier: "mini",
     tech: ["HTML", "CSS", "JavaScript"],
     description:
       "A quick-play game against the computer with animated results and a running scoreboard.",
@@ -547,7 +554,7 @@ export const milestones: Milestone[] = [
   {
     title: "Building Cuddle",
     period: "Ongoing",
-    description: "Developing a clothing-brand e-commerce website.",
+    description: "Developing a winter-wear clothing brand concept.",
   },
 ];
 
