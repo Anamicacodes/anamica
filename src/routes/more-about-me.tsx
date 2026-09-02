@@ -119,8 +119,8 @@ function MoreAboutMePage() {
                       <h2 className="mt-4 font-display text-lg font-bold text-foreground">
                         {h.title}
                       </h2>
-                      <p className="mt-2 text-sm font-medium text-accent-foreground">{h.lead}</p>
-                      <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-2 text-sm font-semibold text-foreground">{h.lead}</p>
+                      <ul className="mt-4 space-y-2.5 text-sm leading-relaxed text-foreground/80">
                         {h.points.map((p) => (
                           <li key={p} className="flex gap-2.5">
                             <span
@@ -149,7 +149,7 @@ function MoreAboutMePage() {
                       <h3 className="mt-3 font-display text-base font-bold text-foreground">
                         {p.title}
                       </h3>
-                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-2 text-sm leading-relaxed text-foreground/80">
                         {p.text}
                       </p>
                     </div>

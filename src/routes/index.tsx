@@ -7,7 +7,7 @@ import { Experience } from "@/components/portfolio/Experience";
 import { Projects } from "@/components/portfolio/Projects";
 import { Gallery } from "@/components/portfolio/Gallery";
 import { Journey } from "@/components/portfolio/Journey";
-import { Contact, Footer } from "@/components/portfolio/Contact";
+import { Contact, FindMeOnline, Footer } from "@/components/portfolio/Contact";
 import { CursorGlow } from "@/components/portfolio/ui";
 
 export const Route = createFileRoute("/")({
@@ -72,6 +72,7 @@ function Index() {
         <Projects />
         <Gallery />
         <Contact />
+        <FindMeOnline />
       </main>
       <Footer />
     </div>
