@@ -1,7 +1,8 @@
 import { useState, type FormEvent } from "react";
-import { Github, Linkedin, Mail, Send, Heart, Compass, ArrowUpRight } from "lucide-react";
-import { profile } from "@/data/portfolio";
+import { Github, Linkedin, Mail, Send, Heart, Compass, MessageCircle } from "lucide-react";
+import { profile, whatsappUrl } from "@/data/portfolio";
 import { Reveal, SectionHeading } from "./ui";
+
 
 type Status = "idle" | "error" | "ready";
 
