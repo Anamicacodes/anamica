@@ -28,8 +28,18 @@ export const profile = {
   email: "anamicagupta246@gmail.com",
   linkedin: "https://www.linkedin.com/in/ana2406/",
   github: "https://github.com/Anamicacodes",
+  /** Digits only, with country code — used to build the wa.me link. */
+  whatsapp: "919876543210",
+  whatsappMessage:
+    "Hi Anamica! I came across your portfolio and would like to discuss a collaboration.",
   cvUrl: resumePdf,
 };
+
+/** Ready-to-use WhatsApp deep link (single source of truth). */
+export const whatsappUrl = `https://wa.me/${profile.whatsapp}?text=${encodeURIComponent(
+  profile.whatsappMessage,
+)}`;
+
 
 export interface SkillGroup {
   title: string;
