@@ -579,3 +579,108 @@ export const navLinks = [
   { label: "Gallery", href: "/gallery" },
   { label: "Contact", href: "/#contact" },
 ];
+
+/* ---------------------------------------------------------------------------
+ * Compact, interactive content blocks (About facets, Right now, Achievements,
+ * Brand collaborations). Each lives in exactly one place on the site.
+ * ------------------------------------------------------------------------ */
+
+export interface Facet {
+  id: string;
+  label: string;
+  tagline: string;
+  detail: string;
+  tags: string[];
+}
+
+export const facets: Facet[] = [
+  {
+    id: "stage",
+    label: "On Stage",
+    tagline: "Anchoring, public speaking, events",
+    detail:
+      "Happiest with a mic — anchoring SISSCON 2026, HackManthan and Web-a-thon 2.0, and speaking at campus stages.",
+    tags: ["Anchoring", "Public speaking", "Events"],
+  },
+  {
+    id: "desk",
+    label: "At My Desk",
+    tagline: "C, C++, Python, DSA",
+    detail:
+      "First-year CSE at LPU with a 9.07 CGPA — building fundamentals in C and C++, solving DSA, and writing Python.",
+    tags: ["C", "C++", "Python", "DSA"],
+  },
+  {
+    id: "building",
+    label: "Building",
+    tagline: "Cuddle, web projects, creative ideas",
+    detail:
+      "Developing Cuddle, a winter-wear clothing brand concept, plus web projects like the LPU Touch classroom finder.",
+    tags: ["Cuddle", "Frontend", "Product ideas"],
+  },
+  {
+    id: "beyond",
+    label: "Beyond Code",
+    tagline: "Dance, events, content & modeling",
+    detail:
+      "12 years of Kathak, Bharatanatyam and classical dance, poetry and sketching — plus brand face and content work.",
+    tags: ["Dance", "Content", "Brand face"],
+  },
+];
+
+export const currentlyLearning = ["OOP in C++", "Data Structures & Algorithms (DSA)"];
+
+export const rightNow = [
+  { verb: "Learning", value: "C++ OOP + DSA" },
+  { verb: "Building", value: "Cuddle" },
+  { verb: "Exploring", value: "Brand collaborations & content" },
+  { verb: "Doing", value: "Anchoring & events" },
+];
+
+export interface Achievement {
+  title: string;
+  meta: string;
+  detail: string;
+}
+
+export const achievements: Achievement[] = [
+  {
+    title: "1st Position — Inter-Hostel State Representation",
+    meta: "Dance competition",
+    detail: "Represented Punjab and took first place in the inter-hostel state representation.",
+  },
+  {
+    title: "Anchored SISSCON 2026",
+    meta: "Conference stage",
+    detail: "Hosted the conference and kept a full auditorium running to schedule.",
+  },
+  {
+    title: "Anchored HackManthan & Web-a-thon 2.0",
+    meta: "Hackathon stages",
+    detail: "On the mic across two campus hackathons — openings, rounds and results.",
+  },
+  {
+    title: "Brand Face of EventEye",
+    meta: "Sep – Oct 2025",
+    detail: "Official face of the campus event startup, driving student outreach.",
+  },
+];
+
+export const brandWork = [
+  "Brand & product promotional shoots",
+  "Short-form promotional content",
+  "Fashion & clothing promotions",
+  "Café, food & lifestyle promotions",
+  "Event promotion",
+  "Brand representation",
+];
+
+/** Secondary destinations tucked into the desktop "More" menu. */
+export const moreLinks = [
+  { label: "Gallery", href: "/gallery" },
+  { label: "Achievements", href: "/#achievements" },
+  { label: "Certificates", href: "/certificates" },
+  { label: "Other projects & games", href: "/#projects" },
+  { label: "More about me", href: "/more-about-me" },
+  { label: "Journey", href: "/#journey" },
+];
