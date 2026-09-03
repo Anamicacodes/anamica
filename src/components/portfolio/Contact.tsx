@@ -55,31 +55,23 @@ export function Contact() {
           <div className="glass rounded-3xl p-6 sm:p-10">
             <div className="flex flex-wrap justify-center gap-4">
               <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-2xl bg-accent px-6 py-3 font-semibold text-accent-foreground transition-transform hover:scale-[1.03]"
+              >
+                <MessageCircle className="size-4" aria-hidden="true" />
+                Chat on WhatsApp
+              </a>
+              <a
                 href={`mailto:${profile.email}`}
                 className="inline-flex items-center gap-2 rounded-2xl bg-primary px-6 py-3 font-semibold text-primary-foreground transition-transform hover:scale-[1.03]"
               >
                 <Mail className="size-4" aria-hidden="true" />
                 {profile.email}
               </a>
-              <a
-                href={profile.linkedin}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl border border-border px-6 py-3 font-semibold text-foreground transition-colors hover:bg-secondary"
-              >
-                <Linkedin className="size-4" aria-hidden="true" />
-                LinkedIn
-              </a>
-              <a
-                href={profile.github}
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-2 rounded-2xl border border-border px-6 py-3 font-semibold text-foreground transition-colors hover:bg-secondary"
-              >
-                <Github className="size-4" aria-hidden="true" />
-                GitHub
-              </a>
             </div>
+
 
             <div className="my-8 flex items-center gap-4" aria-hidden="true">
               <span className="h-px flex-1 bg-border" />
