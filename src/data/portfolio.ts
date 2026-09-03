@@ -574,11 +574,10 @@ export const navLinks = [
   { label: "Skills", href: "/#skills" },
   { label: "Experience", href: "/#experience" },
   { label: "Projects", href: "/#projects" },
-  { label: "Certificates", href: "/certificates" },
-  { label: "More about me", href: "/more-about-me" },
-  { label: "Gallery", href: "/gallery" },
+  { label: "Collaborate", href: "/#collaborate" },
   { label: "Contact", href: "/#contact" },
 ];
+
 
 /* ---------------------------------------------------------------------------
  * Compact, interactive content blocks (About facets, Right now, Achievements,
