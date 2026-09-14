@@ -29,7 +29,7 @@ export const profile = {
   linkedin: "https://www.linkedin.com/in/ana2406/",
   github: "https://github.com/Anamicacodes",
   /** Digits only, with country code — used to build the wa.me link. */
-  whatsapp: "919876543210",
+  whatsapp: "918427964212",
   whatsappMessage:
     "Hi Anamica! I came across your portfolio and would like to discuss a collaboration.",
   cvUrl: resumePdf,
