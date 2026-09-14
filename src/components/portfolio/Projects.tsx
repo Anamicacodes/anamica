@@ -144,10 +144,11 @@ export function Projects() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {major.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
-              <MajorCard p={p} />
+              <MajorCard p={p} featured={i === 0} />
             </Reveal>
           ))}
         </div>
+
 
         {mini.length > 0 && (
           <>
