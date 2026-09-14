@@ -115,10 +115,10 @@ export function Navbar() {
       </nav>
 
       {open && (
-        <div className="glass mx-3 mt-2 rounded-2xl p-3 lg:hidden">
+        <div className="glass mx-3 mt-2 animate-fade-in rounded-2xl p-3 lg:hidden">
           <ul className="grid gap-1">
-            {navLinks.map((l) => (
-              <li key={l.href}>
+            {[...navLinks, ...moreLinks].map((l) => (
+              <li key={l.href + l.label}>
                 <a
                   href={l.href}
                   onClick={() => setOpen(false)}
@@ -130,7 +130,9 @@ export function Navbar() {
             ))}
             <li>
               <a
-                href="/#contact"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noreferrer"
                 onClick={() => setOpen(false)}
                 className="mt-1 block rounded-xl bg-primary px-4 py-3 text-center text-sm font-semibold text-primary-foreground"
               >
@@ -140,6 +142,7 @@ export function Navbar() {
           </ul>
         </div>
       )}
+
     </header>
   );
 }
