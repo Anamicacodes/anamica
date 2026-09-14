@@ -71,11 +71,14 @@ function Index() {
         <About />
         <Skills />
         <Experience />
-        <Journey />
+        <Achievements />
         <Projects />
+        <BrandCollabs />
+        <Journey />
         <Gallery />
         <Contact />
         <FindMeOnline />
+
       </main>
       <Footer />
     </div>
