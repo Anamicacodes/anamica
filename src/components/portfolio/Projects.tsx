@@ -8,19 +8,38 @@ function projectIcon(title: string) {
   return ShoppingBag;
 }
 
-function MajorCard({ p }: { p: Project }) {
+function MajorCard({ p, featured = false }: { p: Project; featured?: boolean }) {
   const ProjectIcon = projectIcon(p.title);
   return (
     <Tilt className="h-full" max={5}>
-      <article className="glass glow-card flex h-full flex-col overflow-hidden rounded-3xl">
-        <div className="relative grid h-48 place-items-center overflow-hidden border-b border-border bg-secondary/50">
+      <article
+        className={`glass glow-card flex h-full flex-col overflow-hidden rounded-3xl transition-transform duration-300 hover:-translate-y-1 ${
+          featured ? "ring-2 ring-primary/40" : ""
+        }`}
+      >
+        <div
+          className={`relative grid place-items-center overflow-hidden border-b border-border bg-secondary/50 ${
+            featured ? "h-64" : "h-48"
+          }`}
+        >
           <div className="bg-grid absolute inset-0 opacity-50" aria-hidden="true" />
-          <ProjectIcon className="relative size-12 text-primary" aria-hidden="true" />
+          <ProjectIcon
+            className={`relative text-primary transition-transform duration-500 group-hover:scale-110 ${
+              featured ? "size-16" : "size-12"
+            }`}
+            aria-hidden="true"
+          />
+          {featured && (
+            <span className="absolute right-4 top-4 rounded-full bg-primary px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-primary-foreground">
+              Featured
+            </span>
+          )}
           <span className="absolute left-4 top-4 inline-flex items-center gap-1.5 rounded-full bg-coral px-3 py-1 text-[11px] font-bold uppercase tracking-wider text-coral-foreground">
             <Sparkles className="size-3" aria-hidden="true" />
             {p.status}
           </span>
         </div>
+
 
         <div className="flex flex-1 flex-col p-6 sm:p-8">
           <h3 className="font-display text-xl font-bold text-foreground">{p.title}</h3>
@@ -125,10 +144,11 @@ export function Projects() {
         <div className="mt-14 grid gap-6 lg:grid-cols-2">
           {major.map((p, i) => (
             <Reveal key={p.title} delay={i * 100}>
-              <MajorCard p={p} />
+              <MajorCard p={p} featured={i === 0} />
             </Reveal>
           ))}
         </div>
+
 
         {mini.length > 0 && (
           <>

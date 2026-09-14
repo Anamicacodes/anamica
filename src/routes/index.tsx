@@ -4,11 +4,14 @@ import { Hero } from "@/components/portfolio/Hero";
 import { About } from "@/components/portfolio/About";
 import { Skills } from "@/components/portfolio/Skills";
 import { Experience } from "@/components/portfolio/Experience";
+import { Achievements } from "@/components/portfolio/Achievements";
+import { BrandCollabs } from "@/components/portfolio/BrandCollabs";
 import { Projects } from "@/components/portfolio/Projects";
 import { Gallery } from "@/components/portfolio/Gallery";
 import { Journey } from "@/components/portfolio/Journey";
 import { Contact, FindMeOnline, Footer } from "@/components/portfolio/Contact";
 import { CursorGlow } from "@/components/portfolio/ui";
+
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -68,11 +71,14 @@ function Index() {
         <About />
         <Skills />
         <Experience />
-        <Journey />
+        <Achievements />
         <Projects />
+        <BrandCollabs />
+        <Journey />
         <Gallery />
         <Contact />
         <FindMeOnline />
+
       </main>
       <Footer />
     </div>
